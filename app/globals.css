@@ -16,18 +16,37 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+.container {
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.titlePage {
+  font-size: 60px;
+  line-height: 120%;
+  font-weight: bold;
+  letter-spacing: -2%;
 }
+
+.heading {
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 700;
+  letter-spacing: -2%;
+}
+
+/* Custom scrollbar hiding */
+.hide-scrollbar {
+  overflow: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
